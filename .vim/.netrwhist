@@ -1,0 +1,7 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =5
+let g:netrw_dirhist_5='/home/bentocarlos/Learning-Code/College/2ª Semestre/Programação de Computadores/7ª Lista de Exercícios (2S)'
+let g:netrw_dirhist_4='/home/bentocarlos/Learning-Code/College/2ª Semestre/Programação de Computadores'
+let g:netrw_dirhist_3='/home/bentocarlos/Learning-Code/College/2ª Semestre'
+let g:netrw_dirhist_2='/home/bentocarlos/Learning-Code/College'
+let g:netrw_dirhist_1='/home/bentocarlos/Learning-Code'
