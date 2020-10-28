@@ -10,12 +10,13 @@ set incsearch
 set inccommand=split
 
 let mapleader="\space>"
-nnoremap <leader>; A;<esc>
 nnoremap <c-p> :Files<cr>
+inoremap ;; <C-o>A;
+inoremap :: <C-o>A:
+map <C-m> :NERDTreeToggle<CR>
 
-" Plugins
-
-call plug#begin('~/.config/nvim/plugged') 
+"Plugins
+call plug#begin('~/.config/nvim/plugged')
 
 Plug 'morhetz/gruvbox'
 Plug 'tpope/vim-fugitive'
@@ -25,17 +26,15 @@ Plug 'sheerun/vim-polyglot'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'   
 Plug 'roxma/nvim-completion-manager'
-Plug 'w0rp/ale'
+Plug 'dense-analysis/ale'
 Plug 'jiangmiao/auto-pairs'
 Plug 'lilydjwg/colorizer'
+Plug 'preservim/nerdtree'
 
 call plug#end()
 
 " Colorscheme
-
-colorscheme gruvbox
 set background=dark
 
 " Enables transparency
-
 hi Normal guibg = NONE ctermbg = NONE
