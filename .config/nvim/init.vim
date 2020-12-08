@@ -8,14 +8,22 @@ set smartcase
 set noswapfile
 set incsearch
 set inccommand=split
+set completeopt=menuone,noinsert,noselect
+set termguicolors
 
 let mapleader="\space>"
+let g:completion_matching_strategy_list = ['exact', 'substring', 'fuzzy']
+" Hexokinase config
+let g:Hexokinase_highlighters = ['backgroundfull']
+let g:Hexokinase_optInPatterns = 'full_hex,rgb,rgba,hsl,hsla,colour_names'
+let g:Hexokinase_refreshEvents = ['TextChanged']
+
 nnoremap <c-p> :Files<cr>
 inoremap ;; <C-o>A;
 inoremap :: <C-o>A:
-map <C-m> :NERDTreeToggle<CR>
+nnoremap <F5> :UndotreeToggle<CR>
 
-"Plugins
+" Plugins
 call plug#begin('~/.config/nvim/plugged')
 
 Plug 'morhetz/gruvbox'
@@ -25,16 +33,30 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'sheerun/vim-polyglot'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'   
-Plug 'roxma/nvim-yarp'
-Plug 'ncm2/ncm2'
-Plug 'dense-analysis/ale'
 Plug 'jiangmiao/auto-pairs'
-Plug 'lilydjwg/colorizer'
-Plug 'preservim/nerdtree'
+Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
+Plug 'neovim/nvim-lspconfig'
+Plug 'nvim-lua/completion-nvim'
+Plug 'nvim-lua/diagnostic-nvim'
 
 call plug#end()
 
+" Lsp Config
+:lua << EOF
+    local nvim_lsp = require('lspconfig')
+	local on_attach = function(_, bufnr)
+	   require('completion').on_attach()
+    end
+	local servers = {'pyls', 'tsserver'}
+	for _, lsp in ipairs(servers) do
+    	nvim_lsp[lsp].setup {
+	        on_attach = on_attach,
+    	}
+    end
+EOF
+
 " Colorscheme
+colorscheme gruvbox
 set background=dark
 
 " Enables transparency
