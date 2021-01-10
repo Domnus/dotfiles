@@ -3,7 +3,7 @@ syntax on
 set number relativenumber
 set tabstop=4 softtabstop=4
 set smartindent
-set nowrap
+set wrap
 set smartcase
 set noswapfile
 set incsearch
@@ -17,6 +17,10 @@ let g:completion_matching_strategy_list = ['exact', 'substring', 'fuzzy']
 let g:Hexokinase_highlighters = ['backgroundfull']
 let g:Hexokinase_optInPatterns = 'full_hex,rgb,rgba,hsl,hsla,colour_names'
 let g:Hexokinase_refreshEvents = ['TextChanged']
+
+" Emmet shorcuts
+let g:user_emmet_mode='inv'
+let g:user_emmet_leader_key=','
 
 nnoremap <c-p> :Files<cr>
 inoremap ;; <C-o>A;
@@ -35,28 +39,14 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'   
 Plug 'jiangmiao/auto-pairs'
 Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
-Plug 'neovim/nvim-lspconfig'
-Plug 'nvim-lua/completion-nvim'
-Plug 'nvim-lua/diagnostic-nvim'
+Plug 'mattn/emmet-vim'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'NLKNguyen/papercolor-theme'
 
 call plug#end()
 
-" Lsp Config
-:lua << EOF
-    local nvim_lsp = require('lspconfig')
-	local on_attach = function(_, bufnr)
-	   require('completion').on_attach()
-    end
-	local servers = {'pyls', 'tsserver'}
-	for _, lsp in ipairs(servers) do
-    	nvim_lsp[lsp].setup {
-	        on_attach = on_attach,
-    	}
-    end
-EOF
-
 " Colorscheme
-colorscheme gruvbox
+colorscheme PaperColor
 set background=dark
 
 " Enables transparency
