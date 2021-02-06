@@ -17,3 +17,8 @@ alias en="nvim $HOME/.config/nvim/init.vim"
 alias l='exa'
 alias ll='exa -l'
 alias ls='exa -lah'
+
+# Pacman
+alias pacs="sudo pacman -Syyu"
+
+logo
