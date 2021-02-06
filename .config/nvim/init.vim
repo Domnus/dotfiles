@@ -10,6 +10,7 @@ set incsearch
 set inccommand=split
 set completeopt=menuone,noinsert,noselect
 set termguicolors
+set cursorline
 
 let mapleader="\space>"
 let g:completion_matching_strategy_list = ['exact', 'substring', 'fuzzy']
@@ -22,9 +23,9 @@ let g:Hexokinase_refreshEvents = ['TextChanged']
 let g:user_emmet_mode='inv'
 let g:user_emmet_leader_key=','
 
+map <c-s> :source ~/.config/nvim/init.vim<CR>
 nnoremap <c-p> :Files<cr>
 inoremap ;; <C-o>A;
-inoremap :: <C-o>A:
 nnoremap <F5> :UndotreeToggle<CR>
 
 " Plugins
