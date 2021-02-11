@@ -19,6 +19,6 @@ alias ll='exa -l'
 alias ls='exa -lah'
 
 # Pacman
-alias pacs="sudo pacman -Syyu"
+alias pacs="sudo pacman -Syu"
 
 logo
