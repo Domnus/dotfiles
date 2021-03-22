@@ -1,5 +1,5 @@
 source $HOME/.config/nvim/nvimtree.vim " nvim-tree
-source $HOME/.config/nvim/openrgb.vim  " openrgb
+source $HOME/.config/nvim/barbar.vim   " barbar
 
 syntax on
 
@@ -14,7 +14,7 @@ set completeopt=menuone,noinsert,noselect
 set termguicolors
 set cursorline
 
-let mapleader="\space>"
+let mapleader = "\<Space>"
 let g:completion_matching_strategy_list = ['exact', 'substring', 'fuzzy']
 " Hexokinase config
 let g:Hexokinase_highlighters = ['backgroundfull']
@@ -25,7 +25,6 @@ let g:rainbow_active = 1
 " Emmet shorcuts
 let g:user_emmet_mode='inv'
 let g:user_emmet_leader_key=','
-
 " lightline colorscheme
 let g:lightline = { 'colorscheme': 'nightfly' } 
 
@@ -33,6 +32,14 @@ map <c-s> :source ~/.config/nvim/init.vim<CR>
 nnoremap <c-p> :Files<cr>
 inoremap ;; <C-o>A;
 nnoremap <F5> :UndotreeToggle<CR>
+nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
+
+
+" Find files using Telescope command-line sugar.
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
 " Plugins
 call plug#begin('~/.config/nvim/plugged')
@@ -41,17 +48,20 @@ Plug 'tpope/vim-fugitive'
 Plug 'mbbill/undotree'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'sheerun/vim-polyglot'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'   
+" Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+" Plug 'junegunn/fzf.vim'   
 Plug 'jiangmiao/auto-pairs'
 Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
 Plug 'mattn/emmet-vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'itchyny/lightline.vim'
 Plug 'tpope/vim-surround'
+Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
 
-" OpenRGB
-Plug 'antoinemadec/openrgb.nvim', {'do': 'UpdateRemotePlugins'}
+" Telescope
+Plug 'nvim-lua/popup.nvim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
 
 " Barbar
 Plug 'kyazdani42/nvim-web-devicons'
