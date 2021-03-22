@@ -1,5 +1,4 @@
 source $HOME/.config/nvim/nvimtree.vim " nvim-tree
-source $HOME/.config/nvim/openrgb.vim  " openrgb
 
 syntax on
 
@@ -49,9 +48,6 @@ Plug 'mattn/emmet-vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'itchyny/lightline.vim'
 Plug 'tpope/vim-surround'
-
-" OpenRGB
-Plug 'antoinemadec/openrgb.nvim', {'do': 'UpdateRemotePlugins'}
 
 " Barbar
 Plug 'kyazdani42/nvim-web-devicons'
