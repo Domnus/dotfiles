@@ -1,0 +1,10 @@
+INFO  2021-01-02T08:41:18.797 49212 set_init_2:754: startup runtimepath/packpath value: /home/bentocarlos/.config/nvim,/etc/xdg/nvim,/home/bentocarlos/.local/share/nvim/site,/home/bentocarlos/.local/share/flatpak/exports/share/nvim/site,/var/lib/flatpak/exports/share/nvim/site,/usr/local/share/nvim/site,/usr/share/nvim/site,/var/lib/snapd/desktop/nvim/site,/usr/share/nvim/runtime,/usr/lib/nvim,/var/lib/snapd/desktop/nvim/site/after,/usr/share/nvim/site/after,/usr/local/share/nvim/site/after,/var/lib/flatpak/exports/share/nvim/site/after,/home/bentocarlos/.local/share/flatpak/exports/share/nvim/site/after,/home/bentocarlos/.local/share/nvim/site/after,/etc/xdg/nvim/after,/home/bentocarlos/.config/nvim/after
+INFO  2021-01-02T08:41:18.798 49212 patch_terminfo_bugs:1696: Disabling smglr with TERM=xterm for non-xterm.
+INFO  2021-01-02T08:41:18.853 49212 on_process_exit:393: exited: pid=49214 status=2 stoptime=0
+INFO  2021-01-02T08:41:18.879 49212 on_process_exit:393: exited: pid=49215 status=2 stoptime=0
+INFO  2021-01-02T08:41:18.903 49212 on_process_exit:393: exited: pid=49216 status=2 stoptime=0
+INFO  2021-01-02T08:41:18.946 49212 on_process_exit:393: exited: pid=49217 status=2 stoptime=0
+INFO  2021-01-02T08:41:18.955 49212 on_process_exit:393: exited: pid=49218 status=2 stoptime=0
+INFO  2021-01-02T08:41:18.979 49212 on_process_exit:393: exited: pid=49219 status=2 stoptime=0
+INFO  2021-01-02T08:41:18.985 49212 main:559: starting main loop
+INFO  2021-01-02T08:41:28.860 49212 os_exit:586: Nvim exit: 0

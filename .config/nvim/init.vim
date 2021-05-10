@@ -57,6 +57,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'itchyny/lightline.vim'
 Plug 'tpope/vim-surround'
 Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
+Plug 'uiiaoo/java-syntax.vim'
 
 " Telescope
 Plug 'nvim-lua/popup.nvim'
@@ -84,7 +85,7 @@ call plug#end()
 " Colorscheme
 let ayucolor="mirage"
 set background=dark
-colorscheme nightfly 
+colorscheme PaperColor
 
 " Enables transparency
 hi Normal guibg = NONE ctermbg = NONE
