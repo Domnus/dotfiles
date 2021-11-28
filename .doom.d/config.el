@@ -28,7 +28,7 @@
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
-(setq doom-theme 'doom-dracula)
+(setq doom-theme 'doom-dark+)
 
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
@@ -57,8 +57,13 @@
 ;; they are implemented.
 
 ;; Add transparency
-(set-frame-parameter (selected-frame) 'alpha '(85 . 50))
-(add-to-list 'default-frame-alist '(alpha . (85 . 50)))
+(set-frame-parameter (selected-frame) 'alpha '(90 . 50))
+(add-to-list 'default-frame-alist '(alpha . (90 . 50)))
 
 ;; Start maximized
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
+
+;; Change tab size
+(setq-default indent-tabs-mode nil)
+(setq-default tab-width 4)
+(setq indent-line-function 'insert-tab)
