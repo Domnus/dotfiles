@@ -67,3 +67,9 @@
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 4)
 (setq indent-line-function 'insert-tab)
+
+;; Replace dartfmt with dart format
+(setq-default format-all-formatters '(("Dart" dart-format)))
+
+;; Rainbow-delimiters
+(add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
