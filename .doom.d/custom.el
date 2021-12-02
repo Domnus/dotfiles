@@ -6,7 +6,7 @@
  '(ansi-color-names-vector
    ["#282828" "#fb4934" "#b8bb26" "#fabd2f" "#83a598" "#cc241d" "#8ec07c" "#ebdbb2"])
  '(custom-safe-themes
-   '("835868dcd17131ba8b9619d14c67c127aa18b90a82438c8613586331129dda63" "7eea50883f10e5c6ad6f81e153c640b3a288cd8dc1d26e4696f7d40f754cc703" default))
+   '("7a7b1d475b42c1a0b61f3b1d1225dd249ffa1abb1b7f726aec59ac7ca3bf4dae" "a454e493a390a749e6cd1345adb72aaf977eae564473bf5578472dd486afc43f" "835868dcd17131ba8b9619d14c67c127aa18b90a82438c8613586331129dda63" "7eea50883f10e5c6ad6f81e153c640b3a288cd8dc1d26e4696f7d40f754cc703" default))
  '(exwm-floating-border-color "#504945")
  '(fci-rule-color "#7c6f64")
  '(highlight-tail-colors ((("#363627" "#363627") . 0) (("#323730" "#323730") . 20)))
@@ -14,7 +14,7 @@
  '(jdee-db-requested-breakpoint-face-colors (cons "#0d1011" "#b8bb26"))
  '(jdee-db-spec-breakpoint-face-colors (cons "#0d1011" "#928374"))
  '(objed-cursor-color "#fb4934")
- '(package-selected-packages '(rainbow-delimiters))
+ '(package-selected-packages '(gruber-darker-theme rainbow-delimiters))
  '(pdf-view-midnight-colors (cons "#ebdbb2" "#282828"))
  '(rustic-ansi-faces
    ["#282828" "#fb4934" "#b8bb26" "#fabd2f" "#83a598" "#cc241d" "#8ec07c" "#ebdbb2"])

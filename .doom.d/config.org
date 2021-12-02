@@ -1,27 +1,80 @@
+* Set name and email address
+#+begin_src emacs-lisp
+
 (setq user-full-name "Bento Carlos"
       user-mail-address "bcsilva49@gmail.com")
 
+#+end_src
+
+* Set font
+
+#+begin_src emacs-lisp
+
 (setq doom-font (font-spec :family "JetBrainsMono Nerd Font Mono" :size 16))
+
+#+end_src
+
+* Set theme
+#+begin_src emacs-lisp
 
 (setq doom-theme 'doom-outrun-electric)
 
+#+end_src
+
+* Org files directory
+#+begin_src emacs-lisp
+
 (setq org-directory "~/org/")
 
+#+end_src
+
+* Line numbers style
+#+begin_src emacs-lisp
+
 (setq display-line-numbers-type t)
+
+#+end_src
+
+* Add transparency
+#+begin_src emacs-lisp
 
 (set-frame-parameter (selected-frame) 'alpha '(90 . 50))
 (add-to-list 'default-frame-alist '(alpha . (90 . 50)))
 
+#+end_src
+
+* Start maximized
+#+begin_src emacs-lisp
+
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
+
+#+end_src
+
+* Change tab size
+#+begin_src emacs-lisp
 
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 4)
 (setq indent-line-function 'insert-tab)
 
+#+end_src
+
+* Replace dartfmt with dart format
+#+begin_src emacs-lisp
+
 (setq-default format-all-formatters '(("Dart" dart-format)))
+
+#+end_src
+
+* Rainbow-delimiters
+#+begin_src emacs-lisp
 
 (add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
 
+#+end_src
+
+* Enable tab completion
+#+begin_src emacs-lisp
 (use-package company
   :after lsp-mode
   :hook (lsp-mode . company-mode)
@@ -35,3 +88,5 @@
 
 (use-package company-box
   :hook (company-mode . company-box-mode))
+
+#+end_src
