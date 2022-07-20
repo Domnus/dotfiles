@@ -40,6 +40,7 @@
     (cons 340 "#7c6f64")
     (cons 360 "#7c6f64")))
  '(vc-annotate-very-old-color nil))
+ '(package-selected-packages '(tide))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

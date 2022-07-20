@@ -3,21 +3,20 @@
 
 (setq user-full-name "Bento Carlos"
       user-mail-address "bcsilva49@gmail.com")
-
 #+end_src
 
 * Set font
 
 #+begin_src emacs-lisp
 
-(setq doom-font (font-spec :family "JetBrainsMono Nerd Font Mono" :size 16))
+(setq doom-font (font-spec :family "FantasqueSansMono Nerd Font Mono" :size 18))
 
 #+end_src
 
 * Set theme
 #+begin_src emacs-lisp
 
-(setq doom-theme 'doom-outrun-electric)
+(setq doom-theme 'doom-xcode)
 
 #+end_src
 
@@ -38,8 +37,8 @@
 * Add transparency
 #+begin_src emacs-lisp
 
-(set-frame-parameter (selected-frame) 'alpha '(90 . 50))
-(add-to-list 'default-frame-alist '(alpha . (90 . 50)))
+(set-frame-parameter (selected-frame) 'alpha '(95 . 50))
+(add-to-list 'default-frame-alist '(alpha . (95 . 50)))
 
 #+end_src
 
@@ -87,6 +86,23 @@
   (company-idle-delay 0.0))
 
 (use-package company-box
-  :hook (company-mode . company-box-mode))
+ :ensure t
+ :hook (company-mode . company-box-mode))
 
+#+end_src
+
+* Javascript
+
+#+begin_src emacs-lisp
+(setq exec-path (append exec-path '("C:\\Program Files\\nodejs")))
+#+end_src
+
+* Tide
+#+begin_src emacs-lisp
+(use-package tide
+  :ensure t
+  :after (typescript-mode company flycheck)
+  :hook ((typescript-mode . tide-setup)
+         (typescript-mode . tide-hl-identifier-mode)
+         (before-save . tide-format-before-save)))
 #+end_src
