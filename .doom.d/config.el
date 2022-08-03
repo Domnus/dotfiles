@@ -1,7 +1,7 @@
 (setq user-full-name "Bento Carlos"
       user-mail-address "bcsilva49@gmail.com")
 
-(setq doom-font (font-spec :family "FantasqueSansMono Nerd Font Mono" :size 18))
+(setq doom-font (font-spec :family "CaskaydiaCove Nerd Font Mono" :size 16))
 
 (setq doom-theme 'doom-xcode)
 
@@ -37,7 +37,7 @@
  :ensure t
  :hook (company-mode . company-box-mode))
 
-(setq exec-path (append exec-path '("C:\\Program Files\\nodejs")))
+;;(setq exec-path (append exec-path '("C:\\Program Files\\nodejs")))
 
 (use-package tide
   :ensure t
@@ -45,3 +45,24 @@
   :hook ((typescript-mode . tide-setup)
          (typescript-mode . tide-hl-identifier-mode)
          (before-save . tide-format-before-save)))
+
+(setq lsp-dart-sdk-dir "/home/bentocarlos/snap/flutter/common/flutter/bin/cache/dart-sdk")
+(setq lsp-dart-flutter-sdk-dir "/home/bentocarlos/snap/flutter/common/flutter")
+
+(require 'package)
+(add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/") t)
+(package-initialize)
+
+(setq package-selected-packages
+  '(dart-mode lsp-mode lsp-dart lsp-treemacs flycheck company
+    ;; Optional packages
+    lsp-ui company hover))
+
+(when (cl-find-if-not #'package-installed-p package-selected-packages)
+  (package-refresh-contents)
+  (mapc #'package-install package-selected-packages))
+
+(add-hook 'dart-mode-hook 'lsp)
+
+(setq gc-cons-threshold (* 100 1024 1024)
+      read-process-output-max (* 1024 1024))
