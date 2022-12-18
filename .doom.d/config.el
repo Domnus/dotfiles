@@ -3,14 +3,14 @@
 
 (setq doom-font (font-spec :family "CaskaydiaCove Nerd Font Mono" :size 16))
 
-(setq doom-theme 'doom-xcode)
+(setq doom-theme 'modus-vivendi)
 
 (setq org-directory "~/org/")
 
-(setq display-line-numbers-type t)
+(setq display-line-numbers-type 'relative)
 
-(set-frame-parameter (selected-frame) 'alpha '(95 . 50))
-(add-to-list 'default-frame-alist '(alpha . (95 . 50)))
+;; (set-frame-parameter (selected-frame) 'alpha '(95 . 50))
+;; (add-to-list 'default-frame-alist '(alpha . (95 . 50)))
 
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
 

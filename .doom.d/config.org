@@ -16,7 +16,7 @@
 * Set theme
 #+begin_src emacs-lisp
 
-(setq doom-theme 'doom-xcode)
+(setq doom-theme 'modus-vivendi)
 
 #+end_src
 
@@ -30,15 +30,15 @@
 * Line numbers style
 #+begin_src emacs-lisp
 
-(setq display-line-numbers-type t)
+(setq display-line-numbers-type 'relative)
 
 #+end_src
 
 * Add transparency
 #+begin_src emacs-lisp
 
-(set-frame-parameter (selected-frame) 'alpha '(95 . 50))
-(add-to-list 'default-frame-alist '(alpha . (95 . 50)))
+;; (set-frame-parameter (selected-frame) 'alpha '(95 . 50))
+;; (add-to-list 'default-frame-alist '(alpha . (95 . 50)))
 
 #+end_src
 
